@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapsack Problem Using Genetic Algorithm</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Knapsack Problem Using Genetic Algorithm</h3>
+
+    <div class="row">
+        <div class="column">
+            <strong>Items Availables</strong>
+            <div id="items_table"></div>
+            <br>
+
+            <form id="form">
+                <table border="0">
+                    <tr>
+                        <td><label for="n_population">Number of population:</label></td>
+                        <td><input type="text" id="n_population" name="n_population" value="6" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="max_weight">Max allowed weight:</label></td>
+                        <td><input type="text" id="max_weight" name="max_weight" value="400" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="target_value">Target of value:</label></td>
+                        <td><input type="text" id="target_value" name="target_value" value="3000" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mutation_rate">Mutation rate:</label></td>
+                        <td><input type="text" id="mutation_rate" name="mutation_rate" value="0.5" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="column">
+            <strong>Iterations</strong>
+            <div id="process_box">
+                &nbsp
+            </div>
+            <strong>Result - Selected Items</strong>
+            <div id="selected_items_table"></div>
+        </div>
+    </div>
+
+    <script src="initialPopulation.js"></script>
+    <script src="calculateFitness.js"></script>
+    <script src="createNewChromosome.js"></script>
+    <script src="crossover.js"></script>
+    <script src="mutation.js"></script>
+    <script src="regeneration.js"></script>
+    <script src="selection.js"></script>
+    <script src="knapsack.js"></script>
+</body>
+
+</html>
